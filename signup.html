@@ -1,0 +1,129 @@
+<html>
+<head>
+<link rel="stylesheet" href='sstyle.css'>
+</head>
+ <body>
+  
+    <h1 align="center" >Sign<span>Up</span></h1>
+
+ <div class="form" >
+ 
+ <form method="POST" action="signup.php">
+  <div id=inputs>
+    <div class=name>
+      Name *  <br><input type="name" name="name" id="name" placeholder=" enter your name"  required>
+    </div>
+    <div class=name>
+   Class * <br>  <input type=text name=class id="class" placeholder=" enter your class" required>
+   </div>
+    <div class=name>
+   Student's Phn  Number * <br>  <input type =tel pattern=[0-9]{10} name=sphnno id="sphnno" placeholder=" your number" required>
+   </div>
+    <div class=name>
+   Parent's-1 Phn Number * <br> <input type =tel pattern=[0-9]{10} name=p1phnno id="p1phnno" placeholder=" parents number"  required>
+   </div>
+    <div class=name>
+   Parent's-2 Phn Number * <br> <input type =tel  pattern=[0-9]{10} name=p2phnno id="p2phnno" placeholder=" parents number"  required>
+   </div>
+    <div class=name>
+   Guardian's Phn Number * <br>  <input placeholder=" enter phoneno"type =tel pattern=[0-9]{10} name=gphnno id="gphnno" placeholder=" gaurdian number" required>
+   </div>
+    <div class=name>
+   E-mail *      <br>   <input placeholder=" enter email" type="email" id="email" name="email"required>
+   </div>
+    <div class=name>
+   Room Number *  <br>   <input placeholder=" enter roomno" type="text" id="rmno" name="rmno"required>
+   </div>
+    <div class=name>
+   Password *  <br> <input placeholder=" enter password" type="password" name="password" id="password" required>
+    <i class="fa-sharp fa-regular fa-eye" id="togglePassword" onclick="togglePassword()"></i>
+    <i class="fa-regular fa-eye-slash" id="togglePasswords" onclick="togglePassword()"></i>
+    </div>
+     <div class=name>
+   Confrim Password * <br>  <input placeholder="Confrim Password" type="password" name="cfrmpassword" id="cfrmpassword" required>
+     </div>
+   </div>
+   
+  <div class=drops>
+   <div class=dropn >
+   <label for="yrofsdy" >Year<span>*</span></label> 
+   <select name=yrofsdy id="yrofsdy" required>
+    <option value = 1>1</option>
+    <option value = 2 >2</option>
+    <option value = 3 >3</option>
+    <option value = 4 >4</option>
+   </select><br><br>
+  </div> 
+  <div class=dropn >
+  <label for="hstno">Hostel <span>*</span></label>
+  <select name=hstno id="hstno" required>
+   <option value = bh1 >BH1</option>
+   <option value = bh2 >BH2</option>
+   <option value = bh3 >BH3</option>
+   <option value = gh1 >GH1</option>
+  </select><br><br>
+  </div>
+  <div class=dropn >
+  <label for="flrno">Floor <span>*</span></label>
+   <select name=flrno id="flrno" required>
+    <option value = g >G</option>
+    <option value = f >F</option>
+    <option value = s >S</option>
+    <option value = t >T</option>
+   </select><br><br>
+    </div>
+  </div>
+  
+        <label for="ppphoto" class=labelpp >Upload passport photo <span>*</span></label>
+        <input name="ppphoto" id="ppphoto"type=file onchange=displayfilename1()>
+        <p id=fileinfo1></p>
+        
+       <label for="sign" class=sign >Upload Signature *</label>
+       <input name="sign" id="sign" type=file onchange=displayfilename2()>
+       <p id=fileinfo2></p>
+  
+   <button name="signup" id="signup">Sign Up</button>
+  
+    </form>
+ </div>
+ 
+ 
+ <div class=bottom>
+ </div>
+ 
+ <script>
+    function togglepassword() {
+      if(documnet.getElementById('pasclseye').display == "none")
+       {
+         documnet.getElementById('pasclseye').display = 'block' ;
+         documnet.getElementById('pasopneye').display == "none" ;
+       }
+    }
+    
+    function displayfilename1(){
+     const fileInput = document.getElementById("ppphoto");
+     const fileinfo = document.getElementById("fileinfo1");
+     if(fileInput.files.length>0){
+        fileinfo.textContent = fileInput.files[0].name;
+     }
+     else
+       fileinfo.textContent = "No Files Selected";
+      
+    }
+    function displayfilename2(){
+     const fileInput = document.getElementById("sign");
+     const fileinfo = document.getElementById("fileinfo2");
+     if(fileInput.files.length>0){
+        fileinfo.textContent = fileInput.files[0].name;
+     }
+     else
+       fileinfo.textContent = "No Files Selected";
+      
+    }
+  
+    
+ </script> 
+   
+ </div>
+ </body>
+ </html>

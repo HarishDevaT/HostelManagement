@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<i class="fa fa-edit"></i>
+<html>
+<head>
+<link rel="stylesheet" href = "style.css" >
+</head>
+<body>
+<div class="form">
+ <span id="userfound"></span>
+ <div id="login">
+  <form action="adlogin.php" method="post">
+   <label for="adminname" required max="30" ><b>Username</b></label>
+   <input type="name" name="adminname" id = lgname>
+   <label for=adminpos><b>Position</b> </label>
+   <input max="20" name="adminpos" id="lgpassword" >
+   <label for=adminpassword><b>Password</b> </label>
+   <input type="password" max="20" name="adminpassword" id="lgpassword" ><br><br>
+   <button id="loglnk" type=submit>Log In</button>
+   <span id=usr></span>
+  </form>
+
+<script src="login.js">
+</script>
+</body>
+</html>

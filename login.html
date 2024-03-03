@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<i class="fa fa-edit"></i>
+<html>
+<head>
+<link rel="stylesheet" href = "style.css" >
+</head>
+<body>
+<div class="form">
+ <span id="userfound"></span>
+ <div id="login">
+  <form action="login.php" method=POST>
+   <label for="lgname" required max="30" ><b>Username</b></label>
+   <input type="name" name=lgname id = lgname>
+   <label for=lgpassword><b>Password</b> </label>
+   <input type="password" max="20" name=lgpassword id="lgpassword" >
+   <h6>Forget <a href="">password</a>?</h6>
+   <button id="loglnk" type=submit>Log In</button>
+   <span id=usr></span>
+  </form>
+   <h5>Don't have an account ?</h5>
+   <button id ="signlnk" onclick="window.location.href='signup.html'">Sign Up</button>
+
+<script src="login.js">
+</script>
+</body>
+</html>

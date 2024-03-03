@@ -1,0 +1,66 @@
+body{
+  font-size:20px;
+  line-height:25px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.heading{
+  color: rgb(144, 147, 147);
+}
+
+.det{
+  background:rgb(217, 234, 246);
+  padding:25px;
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+}
+
+#icon{
+  text-decoration:none;
+  color:black;
+  margin-right: 50px;
+}
+
+input{
+ font: size 18px;
+ padding:10px;
+ border-radius:5px;
+ border:1px solid black;
+ margin:15px;
+ height:30px;
+}
+
+#leave,#enter{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  background-color:rgb(217, 234, 246) ;
+  margin-top: 50px;
+  padding: 25px;
+  font-weight:200px;
+}
+
+button{
+ margin:20px;
+ padding:15px;
+ border-radius:20px;
+ border:2px solid grey;
+ background:green;
+ opacity:0.7;
+ color:white;
+ font-style:bold;
+ font-size:20px;
+}
+#reqbtn:hover{
+  background-color: rgb(189, 230, 148);
+  cursor: pointer;
+  color: black;
+}
+
+#textar{
+font-size:18px;
+border-radius:5px;
+padding:20px;
+margin:20px;
+border:2px solid grey;
+}

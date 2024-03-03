@@ -1,0 +1,18 @@
+<IfModule mod_alias.c>
+  # Redirect to a URL on a different host
+  Redirect "/service" "http://foo2.example.com/service"
+
+  # Redirect to a URL on the same host
+  Redirect "/one" "/two"
+
+  # Equivalent redirect to URL on the same host
+  Redirect temp "/one" "/two"
+
+  # Permanent redirect to a URL on the same host
+  Redirect permanent "/three" "/four"
+
+  # Redirect to an external URL
+  # Using regular expressions and RedirectMatch
+  RedirectMatch "^/oldfile\.html/?$" "http://example.com/newfile.php"
+</IfModule>
+

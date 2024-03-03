@@ -1,0 +1,44 @@
+<html>
+    <head>
+    </head>
+  <body>
+     <h1 align=center>Admins Info</h1>
+     
+    <p>
+      Name : <span id=name></span> <br>
+      Position : <span id=name></span><br> 
+    </p>
+    
+    <p>Updates for students :</p>
+     <input type=text name=update>
+    
+    <? php
+      
+          $host="localhost" ;
+          $usrname="harish";
+          $password="";
+          	
+       $con-> new mysqli($host,$username,$password,'harish');
+       
+       if($con->connect_error)
+         echo "Error Occured";
+       else{
+          $sql = "Select * from admin where name='".$_POST['name']."';" ;
+          
+          $result=$con->query($sql);
+          if($result->num_rows>0){
+            if($rows = $result->fetch_assoc()){
+               
+            }
+            else{
+              echo "Error Occured" ;
+            }
+          }
+         else{
+           echo "<p id=notfound> NO Students's Found</p>" ;
+         } 
+       }
+    ?>
+    
+  </body>
+</html>

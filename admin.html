@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Admin</title>
+    <link rel=stylesheet href="">
+  <head>
+  <body>
+    <div id=photo>
+    </div>
+    <div>
+     <p>
+      Student Name : <span id=name></span><br>
+      Student Class : <span id=name></span><br>
+      Leaving Date : <span id=levdate></span><br>
+      Leaving time : <span id=levtime></span><br>
+      Entering Date : <span id=entdate></span><br>
+      Entering Time : <span id=enttime></span><br>
+      Student Year : <span id=name></span><br>
+      Father Number : <span id=name></span><br>
+      Mother Number : <span id=name></span><br>
+      Gaurdian Number :<span id=name></span><br>
+      Reason : <span id=textar></span>
+      </p>
+    </div>
+    <button type=submit>Accept</button>
+    <button type=submit>Reject</button>
+    <form id=remarkfrm>
+    <div id=remarkdiv>
+     Remarks :<br>
+      <textarea>travel safe !!</textarea>
+    </div>
+    </form>
+    <?php       
+       session_start();
+          $host="localhost" ;
+          $usrname="root";
+          $password="";
+          $con = new mysqli($host,$usrname,$password,'hostel');
+          if ($con->connect_error)
+           {
+              echo "OOps!!!" ;
+            }
+          else
+           {
+             $query = "SELECT * FROM studentdetails where name='".$_SESSION['name']."'and password ='".$_SESSION['password']."';";
+             $result= $con->query($query) ;
+             if($result->num_rows>0)
+              {  
+                 $rows = $result->fetch_assoc() ;
+                 echo "<script>document.getElementById('name').innerHTML = ' ".$rows['name']."';</script>";
+                 echo "<script>document.getElementById('class').innerHTML = ' ".$rows['class']."';</script>";
+                 echo "<script>document.getElementById('year').innerHTML = ' ".$rows['yrofsdy']."';</script>";
+                 echo "<script>document.getElementById('roomno').innerHTML = ' ".$rows['rmno']."';</script>";
+                 echo "<script>document.getElementById('hstno').innerHTML = ' ".$rows['hstno']."';</script>";
+                 echo "<script>document.getElementById('flrno').innerHTML = ' ".$rows['flrno']."';</script>";
+                 echo "<script>document.getElementById('p1phnno').innerHTML = ' ".$rows['p1phnno']."';</script>";
+                 echo "<script>document.getElementById('p2phnno').innerHTML = ' ".$rows['p2phnno']."';</script>";
+                 echo "<script>document.getElementById('gphnno').innerHTML = ' ".$rows['gphnno']."';</script>";
+                 echo "<script>document.getElementById('sphnno').innerHTML = ' ".$rows['sphnno']."';</script>";
+                 
+              }
+           }
+  </body>
+<html>
